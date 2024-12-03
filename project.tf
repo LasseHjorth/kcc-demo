@@ -154,3 +154,7 @@ resource "local_file" "computeinstance_yaml" {
   content  = templatefile("templates/computeinstance.yaml.tftpl",{ project_id=google_project.project.project_id,subnet=google_compute_subnetwork.primary_subnet.id })
   filename = "computeinstance/computeinstance.yaml"
 }
+
+output "k8s_config" {
+  value       = "gcloud container clusters get-credentials  ${google_container_cluster.primary.name}  --region ${google_container_cluster.primary.location} --project ${google_container_cluster.primary.project}"
+}
