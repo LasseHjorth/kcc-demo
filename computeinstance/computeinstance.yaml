@@ -3,7 +3,7 @@ kind: ComputeInstance
 metadata:
   annotations:
     cnrm.cloud.google.com/allow-stopping-for-update: "true"
-    cnrm.cloud.google.com/project-id: lasse-dvt-kcc-ba3k
+    cnrm.cloud.google.com/project-id: lasse-dvt-kcc-1002
   name: vm-from-yaml
   labels:
     created-from: "image"
@@ -11,7 +11,6 @@ metadata:
 spec:
   machineType: n1-standard-1
   zone: europe-west4-a
-  desiredStatus: "RUNNING"
   bootDisk:
     initializeParams:
       size: 24
@@ -20,7 +19,7 @@ spec:
         external: debian-cloud/debian-11
   networkInterface:
     - subnetworkRef:
-        external: projects/lasse-dvt-kcc-ba3k/regions/europe-west4/subnetworks/primary-subnet
+        external: projects/lasse-dvt-kcc-1002/regions/europe-west4/subnetworks/primary-subnet
       accessConfig:
         - networkTier: premium
           natIpRef:
@@ -37,7 +36,7 @@ kind: ComputeAddress
 metadata:
   name: ip-vm-from-yaml
   annotations:
-    cnrm.cloud.google.com/project-id: lasse-dvt-kcc-ba3k
+    cnrm.cloud.google.com/project-id: lasse-dvt-kcc-1002
 spec:
   location: europe-west4
 

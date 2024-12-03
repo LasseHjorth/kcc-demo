@@ -146,11 +146,11 @@ resource "google_service_account_iam_member" "config_connector_workload_identity
 }
 
 resource "local_file" "configconnecter_yaml" {
-  content  = templatefile("config_connector/configconnecter.yaml.tftpl",{ project_id=google_project.project.project_id,sa_email=google_service_account.config_connector.email })
-  filename = "configconnecter.yaml"
+  content  = templatefile("templates/configconnecter.yaml.tftpl",{ project_id=google_project.project.project_id,sa_email=google_service_account.config_connector.email })
+  filename = "config_connector/configconnecter.yaml"
 }
 
 resource "local_file" "computeinstance_yaml" {
-  content  = templatefile("computeinstance/computeinstance.yaml.tftpl",{ project_id=google_project.project.project_id,subnet=google_compute_subnetwork.primary_subnet.id })
-  filename = "computeinstance.yaml"
+  content  = templatefile("templates/computeinstance.yaml.tftpl",{ project_id=google_project.project.project_id,subnet=google_compute_subnetwork.primary_subnet.id })
+  filename = "computeinstance/computeinstance.yaml"
 }
