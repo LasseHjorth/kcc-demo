@@ -11,4 +11,3 @@ spec:
   # Setting `stateIntoSpec` to `Absent` is recommended. It means setting `cnrm.cloud.google.com/state-into-spec`
   # annotation to `absent` for all Config Connector resources created in the cluster in the future.
   # It prevents Config Connector from populating unspecified fields into the spec.
-  stateIntoSpec: Absent
