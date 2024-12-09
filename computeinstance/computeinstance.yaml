@@ -9,7 +9,7 @@ metadata:
     created-from: "image"
     network-type: "subnetwork"
 spec:
-  machineType: n1-standard-1
+  machineType: e2-standard-2
   zone: europe-west4-a
   bootDisk:
     initializeParams:
