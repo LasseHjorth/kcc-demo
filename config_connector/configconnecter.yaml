@@ -7,7 +7,7 @@ metadata:
   name: configconnector.core.cnrm.cloud.google.com
 spec:
   mode: cluster
-  googleServiceAccount: "config-connector@lasse-dvt-kcc-1002.iam.gserviceaccount.com"
+  googleServiceAccount: "config-connector@lasse-dvt-kcc-o8f5.iam.gserviceaccount.com"
   # Setting `stateIntoSpec` to `Absent` is recommended. It means setting `cnrm.cloud.google.com/state-into-spec`
   # annotation to `absent` for all Config Connector resources created in the cluster in the future.
   # It prevents Config Connector from populating unspecified fields into the spec.
